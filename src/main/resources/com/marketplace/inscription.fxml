@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marketplace.controllers.InscriptionController">
+    <children>
+        <Label text="Inscription" />
+        <TextField fx:id="nomUtilisateurField" promptText="Nom d'utilisateur" />
+        <TextField fx:id="emailField" promptText="Email" />
+        <PasswordField fx:id="motDePasseField" promptText="Mot de passe" />
+        <HBox alignment="CENTER" spacing="10.0">
+            <RadioButton fx:id="acheteurRadio" text="Acheteur" selected="true">
+                <toggleGroup>
+                    <ToggleGroup fx:id="roleGroup" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="vendeurRadio" text="Vendeur" toggleGroup="$roleGroup" />
+        </HBox>
+        <Button onAction="#handleInscription" text="S'inscrire" />
+    </children>
+</VBox>

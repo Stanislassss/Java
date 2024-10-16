@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marketplace.controllers.TableauDeBordAcheteurController">
+    <children>
+        <Label text="Tableau de bord Acheteur" />
+        <HBox spacing="10.0">
+            <TextField fx:id="champRecherche" promptText="Rechercher des vendeurs" HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleRecherche" text="Rechercher" />
+        </HBox>
+        <ListView fx:id="vendeurListView" VBox.vgrow="ALWAYS" />
+        <Button onAction="#handleVoirProduits" text="Voir les produits" />
+        <Separator />
+        <Label text="Mettre à jour le profil" />
+        <TextField fx:id="nomUtilisateurField" promptText="Nom d'utilisateur" />
+        <TextField fx:id="emailField" promptText="Email" />
+        <PasswordField fx:id="motDePasseField" promptText="Nouveau mot de passe" />
+        <ComboBox fx:id="roleComboBox" promptText="Rôle" />
+        <Button onAction="#handleMettreAJourProfil" text="Mettre à jour le profil" />
+        <Button onAction="#handleSupprimerCompte" text="Supprimer le compte" />
+    </children>
+</VBox>

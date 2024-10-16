@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marketplace.controllers.DetailsProduitController">
+    <children>
+        <Label fx:id="nomVendeurLabel" text="Produits" />
+        <ListView fx:id="produitListView" VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>

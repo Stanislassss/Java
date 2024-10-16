@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marketplace.controllers.TableauDeBordVendeurController">
+    <children>
+        <Label text="Tableau de bord Vendeur" />
+        <ListView fx:id="produitListView" VBox.vgrow="ALWAYS" />
+        <GridPane hgap="10" vgap="10">
+            <TextField fx:id="nomProduitField" promptText="Nom du produit" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="categorieProduitField" promptText="Catégorie" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="prixProduitField" promptText="Prix" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Button onAction="#handleAjouterProduit" text="Ajouter un produit" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Button onAction="#handleMettreAJourProduit" text="Mettre à jour le produit" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button onAction="#handleSupprimerProduit" text="Supprimer le produit" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        </GridPane>
+        <Separator />
+        <Label text="Mettre à jour le profil" />
+        <TextField fx:id="nomUtilisateurField" promptText="Nom d'utilisateur" />
+        <TextField fx:id="emailField" promptText="Email" />
+        <PasswordField fx:id="motDePasseField" promptText="Nouveau mot de passe" />
+        <ComboBox fx:id="roleComboBox" promptText="Rôle" />
+        <Button onAction="#handleMettreAJourProfil" text="Mettre à jour le profil" />
+        <Button onAction="#handleSupprimerCompte" text="Supprimer le compte" />
+    </children>
+</VBox>
